@@ -28,7 +28,7 @@
     <ul>
       <li>When you sign in with Apple or Google, we receive your name, email address and a user identifier through Firebase Authentication. If you use Sign in with Apple and choose "Hide My Email", we receive Apple's relay address instead.</li>
       <li>Before you sign in, the app may create a temporary anonymous account so your onboarding answers can be saved. It is replaced by your real account when you sign in.</li>
-      <li>Optional profile details you add, such as a username and profile photo.</li>
+      <li>Optional profile details you add, such as a username, bio and profile photo, and your app language and time zone (used to show dates and streaks on your local calendar).</li>
     </ul>
 
     <h3>Fitness profile</h3>
@@ -45,7 +45,8 @@
     <h3>Photos and camera</h3>
     <ul>
       <li><strong>Profile photo:</strong> if you add one, it is uploaded and stored on our servers.</li>
-      <li><strong>Gym Lens:</strong> when you photograph a piece of gym equipment to swap an exercise, the photo is sent to our server and processed by Google Gemini to recognise the machine. The photo is deleted once recognition finishes; if that deletion fails, an automatic clean-up removes it within about 30 minutes. We keep the recognition result (which machine was found), not the photo.</li>
+      <li><strong>Workout photos:</strong> if you attach a photo from your library to a completed workout, it is uploaded and stored on our servers with that workout. Where social features are available, it can appear in what you share.</li>
+      <li><strong>Gym Lens:</strong> when you photograph a piece of gym equipment to swap an exercise, the photo is sent to our server and processed by Google Gemini to recognise the machine. The photo is deleted once recognition finishes; if that deletion fails, an automatic clean-up removes it within about an hour. We keep the recognition result (which machine was found), not the photo.</li>
     </ul>
 
     <h3>Subscriptions</h3>
@@ -55,7 +56,12 @@
 
     <h3>Notifications</h3>
     <ul>
-      <li>If you allow push notifications, we store a device token so we can send reminders through Firebase Cloud Messaging. You can turn notifications off at any time in iOS Settings.</li>
+      <li>Reminders (for example workout, rest-timer and trial reminders) are local notifications scheduled on your device. We do not receive a push token for them. You can turn notifications off at any time in iOS Settings.</li>
+    </ul>
+
+    <h3>Technical data</h3>
+    <ul>
+      <li>When the app talks to our servers, we receive standard technical information such as your IP address, device model, iOS and app version, and request logs. We use it to run, secure and debug the service.</li>
     </ul>
 
     <h3>Social features (when available)</h3>
@@ -85,15 +91,15 @@
     </ul>
 
     <h2>5. AI features</h2>
-    <p>Dopafit uses Google Gemini to generate training plans and workouts and to recognise gym equipment in Gym Lens photos. To do this we send Gemini the information it needs for that request, such as your goals, experience, training location, limitations and relevant body details, or the equipment photo. We do not send your name or email address with these requests. AI output can be wrong; please read the fitness disclaimer in our Terms of Service.</p>
+    <p>Dopafit uses Google Gemini to generate training plans and workouts and to recognise gym equipment in Gym Lens photos. To do this we send Gemini only the information it needs for that request: for plans and workouts, your goal, experience, recent training, other activities, training preferences, age range (not your date of birth), language, chosen muscles and schedule, and the list of suitable exercises; for Gym Lens, the equipment photo. Your limitations are used on our servers to filter exercises before the request. We do not send your name, email address, height, weight or sex with these requests. AI output can be wrong; please read the fitness disclaimer in our Terms of Service.</p>
 
     <h2>6. Who we share data with</h2>
     <p>We share data only with service providers that help us run Dopafit, and only for that purpose:</p>
     <ul>
-      <li><strong>Google (Firebase Authentication, Firebase Cloud Messaging, Gemini):</strong> sign-in, push notifications and AI features.</li>
+      <li><strong>Google (Firebase Authentication, Google Sign-In, Gemini):</strong> sign-in and AI features.</li>
       <li><strong>Apple:</strong> Sign in with Apple, in-app purchases and Apple Health (on your device).</li>
       <li><strong>RevenueCat:</strong> subscription management.</li>
-      <li><strong>Railway:</strong> hosting of our servers, PostgreSQL database and file storage.</li>
+      <li><strong>Railway:</strong> hosting of our servers, PostgreSQL database, file storage and server logs.</li>
     </ul>
     <p>We may also disclose data if required by law, or as part of a merger or acquisition with the same protections in place. We do not sell your data.</p>
 
@@ -101,10 +107,11 @@
     <p>Your data is stored on servers hosted by Railway and may be processed in countries other than your own, including the United States. Data is sent over encrypted connections (HTTPS), and access is limited to what is needed to run the service.</p>
 
     <h2>8. How long we keep data</h2>
-    <p>We keep your data while your account is active. Gym Lens photos are deleted right after recognition, as described above. When you delete your account, see section 9.</p>
+    <p>We keep your data while your account is active. Gym Lens photos are deleted right after recognition, as described above. For what happens when you delete your account, see section 9.</p>
 
     <h2>9. Deleting your account</h2>
-    <p>You can delete your account at any time in the app: <strong>Profile → Delete account</strong>. Your account is closed immediately: you are signed out, your profile, plans, workouts, records and other content are removed from the app and are no longer visible to anyone, and your record with RevenueCat is deleted. Remaining copies, including in backups, are permanently deleted within 30 days, except where we must keep limited records by law.</p>
+    <p>You can delete your account at any time in the app: <strong>Profile → Account → Delete account</strong>, or from the <strong>Account</strong> menu on the subscription screen. Your account is closed immediately: you are signed out, and your profile, plans, workouts, records and other content are removed from the app and are no longer visible to anyone. We also ask RevenueCat to delete your subscription record.</p>
+    <p>Deactivated records, photos you uploaded and backup copies may remain on our servers, inaccessible in the app, until they are erased. If you want them permanently erased, email us from the address you signed in with and we will erase them, except limited records we must keep by law.</p>
     <p><strong>Deleting your account does not cancel your subscription.</strong> Cancel it in your Apple ID settings (see the Terms of Service).</p>
 
     <h2>10. Your rights</h2>
@@ -131,7 +138,7 @@
     <ul>
       <li>Khi bạn đăng nhập bằng Apple hoặc Google, chúng tôi nhận tên, địa chỉ email và mã định danh người dùng qua Firebase Authentication. Nếu bạn dùng Đăng nhập bằng Apple và chọn "Ẩn email của tôi", chúng tôi chỉ nhận địa chỉ chuyển tiếp của Apple.</li>
       <li>Trước khi bạn đăng nhập, ứng dụng có thể tạo một tài khoản ẩn danh tạm thời để lưu câu trả lời trong phần giới thiệu ban đầu. Tài khoản này được thay bằng tài khoản thật khi bạn đăng nhập.</li>
-      <li>Thông tin hồ sơ tùy chọn bạn thêm vào, như tên người dùng và ảnh đại diện.</li>
+      <li>Thông tin hồ sơ tùy chọn bạn thêm vào, như tên người dùng, giới thiệu bản thân và ảnh đại diện, cùng ngôn ngữ ứng dụng và múi giờ (để hiển thị ngày và chuỗi ngày tập theo lịch địa phương của bạn).</li>
     </ul>
 
     <h3>Hồ sơ tập luyện</h3>
@@ -148,7 +155,8 @@
     <h3>Ảnh và máy ảnh</h3>
     <ul>
       <li><strong>Ảnh đại diện:</strong> nếu bạn thêm ảnh, ảnh được tải lên và lưu trên máy chủ của chúng tôi.</li>
-      <li><strong>Gym Lens:</strong> khi bạn chụp một máy tập để đổi bài, ảnh được gửi đến máy chủ của chúng tôi và được Google Gemini xử lý để nhận diện máy. Ảnh bị xóa ngay khi nhận diện xong; nếu việc xóa gặp lỗi, một tiến trình dọn dẹp tự động sẽ xóa ảnh trong khoảng 30 phút. Chúng tôi chỉ giữ kết quả nhận diện (máy nào), không giữ ảnh.</li>
+      <li><strong>Ảnh buổi tập:</strong> nếu bạn đính kèm một ảnh từ thư viện vào buổi tập đã hoàn thành, ảnh được tải lên và lưu trên máy chủ của chúng tôi cùng buổi tập đó. Khi có tính năng cộng đồng, ảnh có thể xuất hiện trong nội dung bạn chia sẻ.</li>
+      <li><strong>Gym Lens:</strong> khi bạn chụp một máy tập để đổi bài, ảnh được gửi đến máy chủ của chúng tôi và được Google Gemini xử lý để nhận diện máy. Ảnh bị xóa ngay khi nhận diện xong; nếu việc xóa gặp lỗi, một tiến trình dọn dẹp tự động sẽ xóa ảnh trong khoảng một giờ. Chúng tôi chỉ giữ kết quả nhận diện (máy nào), không giữ ảnh.</li>
     </ul>
 
     <h3>Gói đăng ký</h3>
@@ -158,7 +166,12 @@
 
     <h3>Thông báo</h3>
     <ul>
-      <li>Nếu bạn cho phép thông báo đẩy, chúng tôi lưu mã thiết bị để gửi nhắc nhở qua Firebase Cloud Messaging. Bạn có thể tắt thông báo bất cứ lúc nào trong Cài đặt iOS.</li>
+      <li>Các lời nhắc (ví dụ nhắc tập, hẹn giờ nghỉ và nhắc hết hạn dùng thử) là thông báo cục bộ được lên lịch trên thiết bị của bạn. Chúng tôi không nhận mã thông báo đẩy cho các lời nhắc này. Bạn có thể tắt thông báo bất cứ lúc nào trong Cài đặt iOS.</li>
+    </ul>
+
+    <h3>Dữ liệu kỹ thuật</h3>
+    <ul>
+      <li>Khi ứng dụng kết nối với máy chủ, chúng tôi nhận các thông tin kỹ thuật thông thường như địa chỉ IP, dòng máy, phiên bản iOS và ứng dụng, cùng nhật ký yêu cầu. Chúng tôi dùng chúng để vận hành, bảo mật và sửa lỗi dịch vụ.</li>
     </ul>
 
     <h3>Tính năng cộng đồng (khi có)</h3>
@@ -188,15 +201,15 @@
     </ul>
 
     <h2>5. Tính năng AI</h2>
-    <p>Dopafit dùng Google Gemini để tạo giáo án, buổi tập và nhận diện máy tập trong ảnh Gym Lens. Để làm việc này, chúng tôi gửi cho Gemini thông tin cần thiết cho yêu cầu đó, như mục tiêu, kinh nghiệm, nơi tập, hạn chế và thông tin cơ thể liên quan, hoặc ảnh máy tập. Chúng tôi không gửi tên hay email của bạn kèm các yêu cầu này. Kết quả của AI có thể sai; vui lòng đọc phần miễn trừ về sức khỏe trong Điều khoản sử dụng.</p>
+    <p>Dopafit dùng Google Gemini để tạo giáo án, buổi tập và nhận diện máy tập trong ảnh Gym Lens. Để làm việc này, chúng tôi chỉ gửi cho Gemini thông tin cần thiết cho yêu cầu đó: với giáo án và buổi tập là mục tiêu, kinh nghiệm, tình trạng tập gần đây, các hoạt động khác, sở thích tập, nhóm tuổi (không phải ngày sinh), ngôn ngữ, nhóm cơ và lịch tập bạn chọn, cùng danh sách bài tập phù hợp; với Gym Lens là ảnh máy tập. Các hạn chế của bạn được dùng trên máy chủ của chúng tôi để lọc bài tập trước khi gửi yêu cầu. Chúng tôi không gửi tên, email, chiều cao, cân nặng hay giới tính của bạn kèm các yêu cầu này. Kết quả của AI có thể sai; vui lòng đọc phần miễn trừ về sức khỏe trong Điều khoản sử dụng.</p>
 
     <h2>6. Chúng tôi chia sẻ dữ liệu với ai</h2>
     <p>Chúng tôi chỉ chia sẻ dữ liệu với các nhà cung cấp dịch vụ giúp vận hành Dopafit, và chỉ cho mục đích đó:</p>
     <ul>
-      <li><strong>Google (Firebase Authentication, Firebase Cloud Messaging, Gemini):</strong> đăng nhập, thông báo đẩy và tính năng AI.</li>
+      <li><strong>Google (Firebase Authentication, Đăng nhập bằng Google, Gemini):</strong> đăng nhập và tính năng AI.</li>
       <li><strong>Apple:</strong> Đăng nhập bằng Apple, mua hàng trong ứng dụng và Apple Health (trên thiết bị của bạn).</li>
       <li><strong>RevenueCat:</strong> quản lý gói đăng ký.</li>
-      <li><strong>Railway:</strong> lưu trữ máy chủ, cơ sở dữ liệu PostgreSQL và tệp.</li>
+      <li><strong>Railway:</strong> lưu trữ máy chủ, cơ sở dữ liệu PostgreSQL, tệp và nhật ký máy chủ.</li>
     </ul>
     <p>Chúng tôi cũng có thể tiết lộ dữ liệu khi pháp luật yêu cầu, hoặc trong trường hợp sáp nhập, mua lại với cùng mức bảo vệ. Chúng tôi không bán dữ liệu của bạn.</p>
 
@@ -204,10 +217,11 @@
     <p>Dữ liệu của bạn được lưu trên máy chủ do Railway cung cấp và có thể được xử lý ở quốc gia khác với nơi bạn sống, bao gồm Hoa Kỳ. Dữ liệu được truyền qua kết nối mã hóa (HTTPS) và quyền truy cập được giới hạn ở mức cần thiết để vận hành dịch vụ.</p>
 
     <h2>8. Thời gian lưu giữ</h2>
-    <p>Chúng tôi giữ dữ liệu khi tài khoản của bạn còn hoạt động. Ảnh Gym Lens bị xóa ngay sau khi nhận diện như mô tả ở trên. Khi bạn xóa tài khoản, xem mục 9.</p>
+    <p>Chúng tôi giữ dữ liệu khi tài khoản của bạn còn hoạt động. Ảnh Gym Lens bị xóa ngay sau khi nhận diện như mô tả ở trên. Về những gì xảy ra khi bạn xóa tài khoản, xem mục 9.</p>
 
     <h2>9. Xóa tài khoản</h2>
-    <p>Bạn có thể xóa tài khoản bất cứ lúc nào trong ứng dụng: <strong>Hồ sơ → Xóa tài khoản</strong>. Tài khoản bị đóng ngay lập tức: bạn bị đăng xuất, hồ sơ, giáo án, buổi tập, kỷ lục và nội dung khác bị gỡ khỏi ứng dụng và không còn ai nhìn thấy, và hồ sơ của bạn tại RevenueCat bị xóa. Các bản sao còn lại, kể cả bản sao lưu, sẽ bị xóa vĩnh viễn trong vòng 30 ngày, trừ những hồ sơ tối thiểu mà pháp luật yêu cầu chúng tôi giữ.</p>
+    <p>Bạn có thể xóa tài khoản bất cứ lúc nào trong ứng dụng: <strong>Hồ sơ → Tài khoản → Xóa tài khoản</strong>, hoặc từ menu <strong>Tài khoản</strong> trên màn hình đăng ký. Tài khoản bị đóng ngay lập tức: bạn bị đăng xuất, và hồ sơ, giáo án, buổi tập, kỷ lục cùng nội dung khác bị gỡ khỏi ứng dụng và không còn ai nhìn thấy. Chúng tôi cũng yêu cầu RevenueCat xóa hồ sơ đăng ký của bạn.</p>
+    <p>Các bản ghi đã vô hiệu hóa, ảnh bạn đã tải lên và bản sao lưu có thể vẫn còn trên máy chủ, không truy cập được trong ứng dụng, cho đến khi bị xóa. Nếu bạn muốn xóa vĩnh viễn, hãy email cho chúng tôi từ địa chỉ bạn dùng để đăng nhập và chúng tôi sẽ xóa, trừ những hồ sơ tối thiểu mà pháp luật yêu cầu chúng tôi giữ.</p>
     <p><strong>Xóa tài khoản không hủy gói đăng ký.</strong> Hãy hủy trong phần cài đặt Apple ID (xem Điều khoản sử dụng).</p>
 
     <h2>10. Quyền của bạn</h2>
