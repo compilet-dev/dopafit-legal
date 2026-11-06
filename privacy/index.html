@@ -17,7 +17,7 @@
   <section class="lang-section" id="en" lang="en">
     <span class="lang-label">English</span>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 27 October 2026</p>
+    <p class="updated">Last updated: 6 November 2026</p>
 
     <p>This policy explains what data the Dopafit app ("Dopafit", "the app") collects, why, and what choices you have. Dopafit is operated by Compilet Inc. ("we", "us"). If you have a question, use the contact details at the end of this page.</p>
 
@@ -26,27 +26,20 @@
     <h2>1. Data we collect</h2>
     <h3>Account</h3>
     <ul>
-      <li>When you sign in with Apple or Google, we receive your name, email address and a user identifier through Firebase Authentication. If you use Sign in with Apple and choose "Hide My Email", we receive Apple's relay address instead.</li>
+      <li>When you sign in with Apple or Google, we receive your name, email address, a user identifier and, if your Google account has one, your profile photo link through Firebase Authentication. If you use Sign in with Apple and choose "Hide My Email", we receive Apple's relay address instead.</li>
       <li>Before you sign in, the app may create a temporary anonymous account so your onboarding answers can be saved. It is replaced by your real account when you sign in.</li>
-      <li>Optional profile details you add, such as a username, bio and profile photo, and your app language and time zone (used to show dates and streaks on your local calendar).</li>
+      <li>Your app language and time zone (used to show dates and streaks on your local calendar).</li>
     </ul>
 
     <h3>Fitness profile</h3>
     <ul>
-      <li>Your answers during onboarding: goals, training experience, where you train, and any limitations or injuries you tell us about.</li>
-      <li>Optional body details: sex, date of birth, height and weight. You can type them in or, with your permission, let the app read them from Apple Health.</li>
+      <li>Your answers during onboarding: your goal, what holds you back, how you heard about Dopafit, your training experience and recent training, where you train and your equipment, your schedule and session length, the muscles you want to focus on, and other activities you do.</li>
+      <li>Optional body details: sex, age range or date of birth, height and weight. You can enter them yourself or, with your permission, let the app read them from Apple Health.</li>
     </ul>
 
     <h3>Training data</h3>
     <ul>
-      <li>Workout plans, workouts, logged sets, personal records, streaks and progress.</li>
-    </ul>
-
-    <h3>Photos and camera</h3>
-    <ul>
-      <li><strong>Profile photo:</strong> if you add one, it is uploaded and stored on our servers.</li>
-      <li><strong>Workout photos:</strong> if you attach a photo from your library to a completed workout, it is uploaded and stored on our servers with that workout. Where social features are available, it can appear in what you share.</li>
-      <li><strong>Gym Lens:</strong> when you photograph a piece of gym equipment to swap an exercise, the photo is sent to our server and processed by Google Gemini to recognise the machine. The photo is deleted once recognition finishes; if that deletion fails, an automatic clean-up removes it within about an hour. We keep the recognition result (which machine was found), not the photo.</li>
+      <li>Workout plans, workouts, logged sets, notes you add, personal records, streaks, progress and body measurements you log.</li>
     </ul>
 
     <h3>Subscriptions</h3>
@@ -61,28 +54,23 @@
 
     <h3>Technical data</h3>
     <ul>
-      <li>When the app talks to our servers, we receive standard technical information such as your IP address, device model, iOS and app version, and request logs. We use it to run, secure and debug the service.</li>
-    </ul>
-
-    <h3>Social features (when available)</h3>
-    <ul>
-      <li>Some versions of the app include social features such as sharing workouts, following other people, likes and comments. What you share is visible according to the visibility you choose (private, followers, or public). We also record which posts you have seen so we do not show them again, and any reports or blocks you make.</li>
-      <li><strong>Find friends from Contacts:</strong> only if you allow access, the app reads the email addresses in your contacts and sends them to our server over an encrypted connection to look up which of them already have a Dopafit account. The addresses are used only for that lookup and are not stored. No other contact details (names, phone numbers) are read.</li>
+      <li>When the app talks to our servers, we receive standard technical information such as your IP address, app and system details your device sends, and request logs. We use it to run, secure and debug the service.</li>
     </ul>
 
     <h2>2. Data we do not collect</h2>
     <ul>
-      <li><strong>Apple Music:</strong> where this feature is available, the app lets you pick playlists and control playback on your device. We do not receive or store your music library or listening history.</li>
       <li>We do not collect your precise location.</li>
+      <li>The app does not access your camera, photo library, contacts or music library.</li>
     </ul>
 
+
     <h2>3. Apple Health</h2>
-    <p>With your permission, Dopafit reads your sex, date of birth, height and weight from Apple Health to personalise your training, and writes your completed workouts to Apple Health. You choose exactly what to share in the Health app and can change it at any time. Data obtained from Apple Health is never used for advertising or marketing, never sold, and never shared with third parties except to provide the app's features as described here.</p>
+    <p>With your permission, Dopafit reads your sex, date of birth, height and weight from Apple Health to personalise your training, and, if you turn this on, writes your completed workouts to Apple Health. You choose exactly what to share in the Health app and can change it at any time. Data obtained from Apple Health is never used for advertising or marketing, never sold, and never shared with third parties except the service providers in section 7 that host and run the app for us.</p>
 
     <h2>4. How we use your data</h2>
     <ul>
       <li>To create and secure your account and keep your data in sync across sessions.</li>
-      <li>To build and adapt your training plan and workouts, including with AI (see below).</li>
+      <li>To build and adapt your training plan and workouts.</li>
       <li>To show your progress, records and streaks.</li>
       <li>To manage your subscription and access to paid features.</li>
       <li>To send reminders you have opted into.</li>
@@ -91,26 +79,27 @@
     </ul>
 
     <h2>5. AI features</h2>
-    <p>Dopafit uses Google Gemini to generate training plans and workouts and to recognise gym equipment in Gym Lens photos. To do this we send Gemini only the information it needs for that request: for plans and workouts, your goal, experience, recent training, other activities, training preferences, age range (not your date of birth), language, chosen muscles and schedule, and the list of suitable exercises; for Gym Lens, the equipment photo. Your limitations are used on our servers to filter exercises before the request. We do not send your name, email address, height, weight or sex with these requests. AI output can be wrong; please read the fitness disclaimer in our Terms of Service.</p>
+    <p>This version of Dopafit does not send your personal data to third-party AI services. Your plan and workouts are built on our own servers. If we add an AI feature that shares your data, we will tell you what is shared and with whom, and ask for your permission first.</p>
 
     <h2>6. Advertising measurement (Meta)</h2>
     <p>We advertise Dopafit on Facebook and Instagram. To learn which ads bring people to the app, the app uses the Meta SDK and RevenueCat to send Meta Platforms a small set of events:</p>
     <ul>
       <li><strong>From the app:</strong> the app was opened; onboarding started; an onboarding step was completed (only the step's name and position, never your answer); sign-in was completed (and whether with Apple or Google); you reached the Pro introduction; a subscription screen was shown; you tapped the buy button (and which plan).</li>
-      <li><strong>From RevenueCat's server:</strong> subscription events such as a trial starting, a purchase and a renewal, with the plan and price.</li>
+      <li><strong>From RevenueCat's server, only if you allow tracking:</strong> subscription events such as a trial starting, a purchase and a renewal, with the plan and price.</li>
       <li><strong>With each event:</strong> technical data such as IP address, device model, iOS and app version, an app-specific device identifier and a Meta anonymous ID. Your device's advertising identifier (IDFA) is included only if you allow tracking.</li>
     </ul>
     <p>We never send Meta your onboarding answers, health or body data, workouts, name or email address.</p>
-    <p><strong>Your choice:</strong> the app asks your permission through Apple's App Tracking Transparency prompt during onboarding. If you decline, the app does not read your advertising identifier and events are marked as not allowed for tracking, so Meta may use them only in limited ways. Declining changes nothing in the app. You can change your choice at any time in iOS Settings → Privacy &amp; Security → Tracking. Meta handles the data it receives under its own <a href="https://www.facebook.com/privacy/policy/">Privacy Policy</a>.</p>
+    <p><strong>Your choice:</strong> the app asks your permission through Apple's App Tracking Transparency prompt during onboarding. If you decline, iOS does not give the app your advertising identifier and events are marked as not allowed for tracking, so Meta may use them only in limited ways. Declining changes nothing in the app. You can change your choice at any time in iOS Settings → Privacy &amp; Security → Tracking. Meta handles the data it receives under its own <a href="https://www.facebook.com/privacy/policy/">Privacy Policy</a>.</p>
 
     <h2>7. Who we share data with</h2>
     <p>We share data only with service providers that help us run and advertise Dopafit, and only for those purposes:</p>
     <ul>
-      <li><strong>Google (Firebase Authentication, Google Sign-In, Gemini):</strong> sign-in and AI features.</li>
+      <li><strong>Google (Firebase Authentication, Google Sign-In):</strong> sign-in.</li>
       <li><strong>Apple:</strong> Sign in with Apple, in-app purchases and Apple Health (on your device).</li>
       <li><strong>RevenueCat:</strong> subscription management, and sending subscription events to Meta (section 6).</li>
       <li><strong>Meta Platforms:</strong> measuring our Facebook and Instagram ads (section 6).</li>
       <li><strong>Amazon Web Services (AWS):</strong> hosting of our servers, PostgreSQL database, file storage and server logs.</li>
+      <li><strong>Monitoring providers such as Datadog:</strong> monitoring of our servers and server logs.</li>
     </ul>
     <p>We may also disclose data if required by law, or as part of a merger or acquisition with the same protections in place. We do not sell your data.</p>
 
@@ -118,15 +107,15 @@
     <p>Your data is stored on Amazon Web Services (AWS) servers in the United States, and may be processed in countries other than your own. Data is sent over encrypted connections (HTTPS), and access is limited to what is needed to run the service.</p>
 
     <h2>9. How long we keep data</h2>
-    <p>We keep your data while your account is active. Gym Lens photos are deleted right after recognition, as described above. For what happens when you delete your account, see section 10.</p>
+    <p>We keep your data while your account is active. For what happens when you delete your account, see section 10.</p>
 
     <h2>10. Deleting your account</h2>
-    <p>You can delete your account at any time in the app: tap your <strong>profile picture</strong> at the top of the screen, then <strong>Delete account</strong> at the bottom of the page, or use the <strong>Account</strong> menu on the subscription screen. Your account is closed immediately: you are signed out, and your profile, plans, workouts, records and other content are removed from the app and are no longer visible to anyone. We also ask RevenueCat to delete your subscription record.</p>
-    <p>Deactivated records, photos you uploaded and backup copies may remain on our servers, inaccessible in the app, until they are erased. If you want them permanently erased, email us from the address you signed in with and we will erase them, except limited records we must keep by law.</p>
+    <p>You can delete your account at any time in the app: open the <strong>Log</strong> tab, tap <strong>Settings</strong>, then tap <strong>Permanently delete account</strong> in the Help section, or use the account menu on the subscription screen. Your account is closed immediately: you are signed out, and your profile, plans, workouts, records and other content are removed from the app and are no longer visible to anyone. If you signed in with Apple, you are asked to confirm with Apple once more so we can revoke the app's access. We also ask RevenueCat to delete your subscription record.</p>
+    <p>Some records and backup copies may remain on our servers after your account is deleted, and they cannot be accessed in the app. To have them erased, email us from the address you signed in with and we will erase them, except limited records we must keep by law.</p>
     <p><strong>Deleting your account does not cancel your subscription.</strong> Cancel it in your Apple ID settings (see the Terms of Service).</p>
 
     <h2>11. Your rights</h2>
-    <p>Depending on where you live, you may have the right to access, correct, export or delete your personal data, to object to or restrict some processing, and to withdraw consent at any time (for example by turning off Health, Camera, Contacts, Tracking or notification access in iOS Settings). To use these rights, contact us. You may also complain to your local data protection authority.</p>
+    <p>Depending on where you live, you may have the right to access, correct, export or delete your personal data, to object to or restrict some processing, and to withdraw consent at any time (for example by turning off Health, Tracking or notification access in iOS Settings). To use these rights, contact us. You may also complain to your local data protection authority.</p>
 
     <h2>12. Children</h2>
     <p>Dopafit is not intended for children under 13, or under 16 in the European Economic Area and the United Kingdom. We do not knowingly collect data from them. If you believe a child has given us data, contact us and we will delete it.</p>
@@ -138,7 +127,7 @@
   <section class="lang-section" id="vi" lang="vi">
     <span class="lang-label">Tiếng Việt</span>
     <h1>Chính sách quyền riêng tư</h1>
-    <p class="updated">Cập nhật lần cuối: 27 tháng 10 năm 2026</p>
+    <p class="updated">Cập nhật lần cuối: 6 tháng 11 năm 2026</p>
 
     <p>Chính sách này giải thích ứng dụng Dopafit ("Dopafit", "ứng dụng") thu thập dữ liệu gì, vì sao, và bạn có những lựa chọn nào. Dopafit do Compilet Inc. ("chúng tôi") vận hành. Nếu có câu hỏi, hãy dùng thông tin liên hệ ở cuối trang.</p>
 
@@ -147,27 +136,20 @@
     <h2>1. Dữ liệu chúng tôi thu thập</h2>
     <h3>Tài khoản</h3>
     <ul>
-      <li>Khi bạn đăng nhập bằng Apple hoặc Google, chúng tôi nhận tên, địa chỉ email và mã định danh người dùng qua Firebase Authentication. Nếu bạn dùng Đăng nhập bằng Apple và chọn "Ẩn email của tôi", chúng tôi chỉ nhận địa chỉ chuyển tiếp của Apple.</li>
+      <li>Khi bạn đăng nhập bằng Apple hoặc Google, chúng tôi nhận tên, địa chỉ email, mã định danh người dùng và, nếu tài khoản Google của bạn có, đường dẫn ảnh đại diện qua Firebase Authentication. Nếu bạn dùng Đăng nhập bằng Apple và chọn "Ẩn email của tôi", chúng tôi chỉ nhận địa chỉ chuyển tiếp của Apple.</li>
       <li>Trước khi bạn đăng nhập, ứng dụng có thể tạo một tài khoản ẩn danh tạm thời để lưu câu trả lời trong phần giới thiệu ban đầu. Tài khoản này được thay bằng tài khoản thật khi bạn đăng nhập.</li>
-      <li>Thông tin hồ sơ tùy chọn bạn thêm vào, như tên người dùng, giới thiệu bản thân và ảnh đại diện, cùng ngôn ngữ ứng dụng và múi giờ (để hiển thị ngày và chuỗi ngày tập theo lịch địa phương của bạn).</li>
+      <li>Ngôn ngữ ứng dụng và múi giờ của bạn (để hiển thị ngày và chuỗi ngày tập theo lịch địa phương của bạn).</li>
     </ul>
 
     <h3>Hồ sơ tập luyện</h3>
     <ul>
-      <li>Câu trả lời của bạn trong phần giới thiệu ban đầu: mục tiêu, kinh nghiệm tập, nơi tập và các hạn chế hoặc chấn thương bạn cho chúng tôi biết.</li>
-      <li>Thông tin cơ thể tùy chọn: giới tính, ngày sinh, chiều cao và cân nặng. Bạn có thể tự nhập hoặc, nếu bạn cho phép, để ứng dụng đọc từ Apple Health.</li>
+      <li>Câu trả lời của bạn trong phần giới thiệu ban đầu: mục tiêu, điều đang cản trở bạn, bạn biết Dopafit từ đâu, kinh nghiệm và tình trạng tập gần đây, nơi tập và thiết bị, lịch tập và thời lượng mỗi buổi, nhóm cơ muốn tập trung, và các hoạt động khác bạn tham gia.</li>
+      <li>Thông tin cơ thể tùy chọn: giới tính, nhóm tuổi hoặc ngày sinh, chiều cao và cân nặng. Bạn có thể tự nhập hoặc, nếu bạn cho phép, để ứng dụng đọc từ Apple Health.</li>
     </ul>
 
     <h3>Dữ liệu tập luyện</h3>
     <ul>
-      <li>Giáo án, buổi tập, các hiệp đã ghi, kỷ lục cá nhân, chuỗi ngày tập và tiến độ.</li>
-    </ul>
-
-    <h3>Ảnh và máy ảnh</h3>
-    <ul>
-      <li><strong>Ảnh đại diện:</strong> nếu bạn thêm ảnh, ảnh được tải lên và lưu trên máy chủ của chúng tôi.</li>
-      <li><strong>Ảnh buổi tập:</strong> nếu bạn đính kèm một ảnh từ thư viện vào buổi tập đã hoàn thành, ảnh được tải lên và lưu trên máy chủ của chúng tôi cùng buổi tập đó. Khi có tính năng cộng đồng, ảnh có thể xuất hiện trong nội dung bạn chia sẻ.</li>
-      <li><strong>Gym Lens:</strong> khi bạn chụp một máy tập để đổi bài, ảnh được gửi đến máy chủ của chúng tôi và được Google Gemini xử lý để nhận diện máy. Ảnh bị xóa ngay khi nhận diện xong; nếu việc xóa gặp lỗi, một tiến trình dọn dẹp tự động sẽ xóa ảnh trong khoảng một giờ. Chúng tôi chỉ giữ kết quả nhận diện (máy nào), không giữ ảnh.</li>
+      <li>Giáo án, buổi tập, các hiệp đã ghi, ghi chú bạn thêm, kỷ lục cá nhân, chuỗi ngày tập, tiến độ và số đo cơ thể bạn ghi lại.</li>
     </ul>
 
     <h3>Gói đăng ký</h3>
@@ -182,28 +164,23 @@
 
     <h3>Dữ liệu kỹ thuật</h3>
     <ul>
-      <li>Khi ứng dụng kết nối với máy chủ, chúng tôi nhận các thông tin kỹ thuật thông thường như địa chỉ IP, dòng máy, phiên bản iOS và ứng dụng, cùng nhật ký yêu cầu. Chúng tôi dùng chúng để vận hành, bảo mật và sửa lỗi dịch vụ.</li>
-    </ul>
-
-    <h3>Tính năng cộng đồng (khi có)</h3>
-    <ul>
-      <li>Một số phiên bản ứng dụng có tính năng cộng đồng như chia sẻ buổi tập, theo dõi người khác, thích và bình luận. Nội dung bạn chia sẻ hiển thị theo chế độ bạn chọn (riêng tư, người theo dõi hoặc công khai). Chúng tôi cũng ghi nhận bài nào bạn đã xem để không hiển thị lại, cùng các báo cáo hoặc lượt chặn bạn thực hiện.</li>
-      <li><strong>Tìm bạn từ Danh bạ:</strong> chỉ khi bạn cho phép, ứng dụng đọc các địa chỉ email trong danh bạ và gửi đến máy chủ của chúng tôi qua kết nối mã hóa để tìm xem ai đã có tài khoản Dopafit. Các địa chỉ này chỉ dùng cho việc tìm kiếm đó và không được lưu lại. Ứng dụng không đọc thông tin danh bạ nào khác (tên, số điện thoại).</li>
+      <li>Khi ứng dụng kết nối với máy chủ, chúng tôi nhận các thông tin kỹ thuật thông thường như địa chỉ IP, thông tin ứng dụng và hệ thống do thiết bị gửi, cùng nhật ký yêu cầu. Chúng tôi dùng chúng để vận hành, bảo mật và sửa lỗi dịch vụ.</li>
     </ul>
 
     <h2>2. Dữ liệu chúng tôi không thu thập</h2>
     <ul>
-      <li><strong>Apple Music:</strong> khi có tính năng này, ứng dụng cho phép bạn chọn playlist và điều khiển nhạc trên thiết bị. Chúng tôi không nhận hay lưu thư viện nhạc hoặc lịch sử nghe của bạn.</li>
       <li>Chúng tôi không thu thập vị trí chính xác của bạn.</li>
+      <li>Ứng dụng không truy cập máy ảnh, thư viện ảnh, danh bạ hay thư viện nhạc của bạn.</li>
     </ul>
 
+
     <h2>3. Apple Health</h2>
-    <p>Khi bạn cho phép, Dopafit đọc giới tính, ngày sinh, chiều cao và cân nặng từ Apple Health để cá nhân hóa việc tập, và ghi các buổi tập đã hoàn thành vào Apple Health. Bạn chọn chính xác những gì được chia sẻ trong ứng dụng Sức khỏe và có thể thay đổi bất cứ lúc nào. Dữ liệu lấy từ Apple Health không bao giờ được dùng cho quảng cáo hay tiếp thị, không bao giờ bị bán, và không chia sẻ cho bên thứ ba trừ khi cần để cung cấp các tính năng được mô tả ở đây.</p>
+    <p>Khi bạn cho phép, Dopafit đọc giới tính, ngày sinh, chiều cao và cân nặng từ Apple Health để cá nhân hóa việc tập, và, nếu bạn bật tính năng này, ghi các buổi tập đã hoàn thành vào Apple Health. Bạn chọn chính xác những gì được chia sẻ trong ứng dụng Sức khỏe và có thể thay đổi bất cứ lúc nào. Dữ liệu lấy từ Apple Health không bao giờ được dùng cho quảng cáo hay tiếp thị, không bao giờ bị bán, và không chia sẻ cho bên thứ ba, trừ các nhà cung cấp dịch vụ ở mục 7 lưu trữ và vận hành ứng dụng cho chúng tôi.</p>
 
     <h2>4. Chúng tôi dùng dữ liệu để làm gì</h2>
     <ul>
       <li>Tạo và bảo vệ tài khoản, đồng bộ dữ liệu của bạn.</li>
-      <li>Xây dựng và điều chỉnh giáo án, buổi tập, bao gồm cả bằng AI (xem bên dưới).</li>
+      <li>Xây dựng và điều chỉnh giáo án, buổi tập.</li>
       <li>Hiển thị tiến độ, kỷ lục và chuỗi ngày tập.</li>
       <li>Quản lý gói đăng ký và quyền truy cập tính năng trả phí.</li>
       <li>Gửi nhắc nhở mà bạn đã bật.</li>
@@ -212,26 +189,27 @@
     </ul>
 
     <h2>5. Tính năng AI</h2>
-    <p>Dopafit dùng Google Gemini để tạo giáo án, buổi tập và nhận diện máy tập trong ảnh Gym Lens. Để làm việc này, chúng tôi chỉ gửi cho Gemini thông tin cần thiết cho yêu cầu đó: với giáo án và buổi tập là mục tiêu, kinh nghiệm, tình trạng tập gần đây, các hoạt động khác, sở thích tập, nhóm tuổi (không phải ngày sinh), ngôn ngữ, nhóm cơ và lịch tập bạn chọn, cùng danh sách bài tập phù hợp; với Gym Lens là ảnh máy tập. Các hạn chế của bạn được dùng trên máy chủ của chúng tôi để lọc bài tập trước khi gửi yêu cầu. Chúng tôi không gửi tên, email, chiều cao, cân nặng hay giới tính của bạn kèm các yêu cầu này. Kết quả của AI có thể sai; vui lòng đọc phần miễn trừ về sức khỏe trong Điều khoản sử dụng.</p>
+    <p>Phiên bản Dopafit này không gửi dữ liệu cá nhân của bạn cho các dịch vụ AI của bên thứ ba. Giáo án và buổi tập được tạo trên máy chủ của chúng tôi. Nếu sau này có tính năng AI cần chia sẻ dữ liệu của bạn, chúng tôi sẽ cho bạn biết dữ liệu nào được chia sẻ, chia sẻ với ai, và xin phép bạn trước.</p>
 
     <h2>6. Đo hiệu quả quảng cáo (Meta)</h2>
     <p>Chúng tôi quảng cáo Dopafit trên Facebook và Instagram. Để biết quảng cáo nào đưa người dùng đến ứng dụng, ứng dụng dùng Meta SDK và RevenueCat để gửi cho Meta Platforms một số ít sự kiện:</p>
     <ul>
       <li><strong>Từ ứng dụng:</strong> ứng dụng được mở; bắt đầu phần giới thiệu ban đầu; hoàn thành một bước giới thiệu (chỉ tên và thứ tự của bước, không bao giờ kèm câu trả lời); đăng nhập xong (và bằng Apple hay Google); đến phần giới thiệu Pro; màn hình gói đăng ký hiện ra; bạn bấm nút mua (và gói nào).</li>
-      <li><strong>Từ máy chủ RevenueCat:</strong> các sự kiện gói đăng ký như bắt đầu dùng thử, mua và gia hạn, kèm gói và giá.</li>
+      <li><strong>Từ máy chủ RevenueCat, chỉ khi bạn cho phép theo dõi:</strong> các sự kiện gói đăng ký như bắt đầu dùng thử, mua và gia hạn, kèm gói và giá.</li>
       <li><strong>Kèm mỗi sự kiện:</strong> dữ liệu kỹ thuật như địa chỉ IP, dòng máy, phiên bản iOS và ứng dụng, một mã định danh thiết bị riêng cho ứng dụng và mã ẩn danh của Meta. Mã định danh quảng cáo của thiết bị (IDFA) chỉ được gửi kèm khi bạn cho phép theo dõi.</li>
     </ul>
     <p>Chúng tôi không bao giờ gửi cho Meta câu trả lời của bạn trong phần giới thiệu ban đầu, dữ liệu sức khỏe hay cơ thể, buổi tập, tên hay email của bạn.</p>
-    <p><strong>Lựa chọn của bạn:</strong> trong phần giới thiệu ban đầu, ứng dụng xin phép bạn qua hộp thoại App Tracking Transparency của Apple. Nếu bạn từ chối, ứng dụng không đọc mã định danh quảng cáo và các sự kiện được đánh dấu là không được phép dùng để theo dõi, nên Meta chỉ được dùng chúng trong phạm vi hạn chế. Từ chối không làm thay đổi gì trong ứng dụng. Bạn có thể đổi lựa chọn bất cứ lúc nào trong Cài đặt iOS → Quyền riêng tư &amp; Bảo mật → Theo dõi. Meta xử lý dữ liệu nhận được theo <a href="https://www.facebook.com/privacy/policy/">Chính sách quyền riêng tư</a> của Meta.</p>
+    <p><strong>Lựa chọn của bạn:</strong> trong phần giới thiệu ban đầu, ứng dụng xin phép bạn qua hộp thoại App Tracking Transparency của Apple. Nếu bạn từ chối, iOS không cấp mã định danh quảng cáo cho ứng dụng và các sự kiện được đánh dấu là không được phép dùng để theo dõi, nên Meta chỉ được dùng chúng trong phạm vi hạn chế. Từ chối không làm thay đổi gì trong ứng dụng. Bạn có thể đổi lựa chọn bất cứ lúc nào trong Cài đặt iOS → Quyền riêng tư &amp; Bảo mật → Theo dõi. Meta xử lý dữ liệu nhận được theo <a href="https://www.facebook.com/privacy/policy/">Chính sách quyền riêng tư</a> của Meta.</p>
 
     <h2>7. Chúng tôi chia sẻ dữ liệu với ai</h2>
     <p>Chúng tôi chỉ chia sẻ dữ liệu với các nhà cung cấp dịch vụ giúp vận hành và quảng cáo Dopafit, và chỉ cho các mục đích đó:</p>
     <ul>
-      <li><strong>Google (Firebase Authentication, Đăng nhập bằng Google, Gemini):</strong> đăng nhập và tính năng AI.</li>
+      <li><strong>Google (Firebase Authentication, Đăng nhập bằng Google):</strong> đăng nhập.</li>
       <li><strong>Apple:</strong> Đăng nhập bằng Apple, mua hàng trong ứng dụng và Apple Health (trên thiết bị của bạn).</li>
       <li><strong>RevenueCat:</strong> quản lý gói đăng ký, và gửi sự kiện gói đăng ký cho Meta (mục 6).</li>
       <li><strong>Meta Platforms:</strong> đo hiệu quả quảng cáo trên Facebook và Instagram (mục 6).</li>
       <li><strong>Amazon Web Services (AWS):</strong> lưu trữ máy chủ, cơ sở dữ liệu PostgreSQL, tệp và nhật ký máy chủ.</li>
+      <li><strong>Nhà cung cấp giám sát như Datadog:</strong> giám sát máy chủ và nhật ký máy chủ.</li>
     </ul>
     <p>Chúng tôi cũng có thể tiết lộ dữ liệu khi pháp luật yêu cầu, hoặc trong trường hợp sáp nhập, mua lại với cùng mức bảo vệ. Chúng tôi không bán dữ liệu của bạn.</p>
 
@@ -239,15 +217,15 @@
     <p>Dữ liệu của bạn được lưu trên máy chủ của Amazon Web Services (AWS) tại Hoa Kỳ và có thể được xử lý ở quốc gia khác với nơi bạn sống. Dữ liệu được truyền qua kết nối mã hóa (HTTPS) và quyền truy cập được giới hạn ở mức cần thiết để vận hành dịch vụ.</p>
 
     <h2>9. Thời gian lưu giữ</h2>
-    <p>Chúng tôi giữ dữ liệu khi tài khoản của bạn còn hoạt động. Ảnh Gym Lens bị xóa ngay sau khi nhận diện như mô tả ở trên. Về những gì xảy ra khi bạn xóa tài khoản, xem mục 10.</p>
+    <p>Chúng tôi giữ dữ liệu khi tài khoản của bạn còn hoạt động. Về những gì xảy ra khi bạn xóa tài khoản, xem mục 10.</p>
 
     <h2>10. Xóa tài khoản</h2>
-    <p>Bạn có thể xóa tài khoản bất cứ lúc nào trong ứng dụng: chạm vào <strong>ảnh đại diện</strong> ở đầu màn hình, rồi chọn <strong>Xóa tài khoản</strong> ở cuối trang, hoặc dùng menu <strong>Tài khoản</strong> trên màn hình đăng ký. Tài khoản bị đóng ngay lập tức: bạn bị đăng xuất, và hồ sơ, giáo án, buổi tập, kỷ lục cùng nội dung khác bị gỡ khỏi ứng dụng và không còn ai nhìn thấy. Chúng tôi cũng yêu cầu RevenueCat xóa hồ sơ đăng ký của bạn.</p>
-    <p>Các bản ghi đã vô hiệu hóa, ảnh bạn đã tải lên và bản sao lưu có thể vẫn còn trên máy chủ, không truy cập được trong ứng dụng, cho đến khi bị xóa. Nếu bạn muốn xóa vĩnh viễn, hãy email cho chúng tôi từ địa chỉ bạn dùng để đăng nhập và chúng tôi sẽ xóa, trừ những hồ sơ tối thiểu mà pháp luật yêu cầu chúng tôi giữ.</p>
+    <p>Bạn có thể xóa tài khoản bất cứ lúc nào trong ứng dụng: mở tab <strong>Nhật ký</strong>, chạm <strong>Cài đặt</strong>, rồi chọn <strong>Xóa tài khoản vĩnh viễn</strong> trong mục Hỗ trợ, hoặc dùng menu tài khoản trên màn hình đăng ký. Tài khoản bị đóng ngay lập tức: bạn bị đăng xuất, và hồ sơ, giáo án, buổi tập, kỷ lục cùng nội dung khác bị gỡ khỏi ứng dụng và không còn ai nhìn thấy. Nếu bạn đăng nhập bằng Apple, bạn sẽ được yêu cầu xác nhận với Apple một lần nữa để chúng tôi thu hồi quyền truy cập của ứng dụng. Chúng tôi cũng yêu cầu RevenueCat xóa hồ sơ đăng ký của bạn.</p>
+    <p>Một số bản ghi và bản sao lưu có thể vẫn còn trên máy chủ sau khi tài khoản bị xóa và không truy cập được trong ứng dụng. Để xóa các dữ liệu này, hãy email cho chúng tôi từ địa chỉ bạn dùng để đăng nhập và chúng tôi sẽ xóa, trừ những hồ sơ tối thiểu mà pháp luật yêu cầu chúng tôi giữ.</p>
     <p><strong>Xóa tài khoản không hủy gói đăng ký.</strong> Hãy hủy trong phần cài đặt Apple ID (xem Điều khoản sử dụng).</p>
 
     <h2>11. Quyền của bạn</h2>
-    <p>Tùy nơi bạn sống, bạn có thể có quyền truy cập, chỉnh sửa, xuất hoặc xóa dữ liệu cá nhân, phản đối hoặc hạn chế một số hoạt động xử lý, và rút lại sự đồng ý bất cứ lúc nào (ví dụ tắt quyền Sức khỏe, Máy ảnh, Danh bạ, Theo dõi hoặc thông báo trong Cài đặt iOS). Để thực hiện các quyền này, hãy liên hệ với chúng tôi. Bạn cũng có thể khiếu nại với cơ quan bảo vệ dữ liệu tại nơi bạn sống.</p>
+    <p>Tùy nơi bạn sống, bạn có thể có quyền truy cập, chỉnh sửa, xuất hoặc xóa dữ liệu cá nhân, phản đối hoặc hạn chế một số hoạt động xử lý, và rút lại sự đồng ý bất cứ lúc nào (ví dụ tắt quyền Sức khỏe, Theo dõi hoặc thông báo trong Cài đặt iOS). Để thực hiện các quyền này, hãy liên hệ với chúng tôi. Bạn cũng có thể khiếu nại với cơ quan bảo vệ dữ liệu tại nơi bạn sống.</p>
 
     <h2>12. Trẻ em</h2>
     <p>Dopafit không dành cho trẻ em dưới 13 tuổi, hoặc dưới 16 tuổi tại Khu vực Kinh tế Châu Âu và Vương quốc Anh. Chúng tôi không cố ý thu thập dữ liệu của các em. Nếu bạn cho rằng một trẻ em đã cung cấp dữ liệu cho chúng tôi, hãy liên hệ để chúng tôi xóa.</p>
